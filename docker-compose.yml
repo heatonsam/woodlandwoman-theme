@@ -39,7 +39,7 @@ services:
       - "80:80"
     volumes:
       - wordpress:/var/www/html
-      - ./nginx-conf:/etc/nginx/conf.d
+      - nginx-conf:/etc/nginx/conf.d
     networks:
       - app-network
 
@@ -49,6 +49,13 @@ volumes:
     driver_opts:
       type: none
       device: /home/heat/Documents/containers/ww-wordpress/wordpress
+      o: bind
+  dbdata:
+  nginx-conf:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/heat/Documents/containers/ww-wordpress/nginx-conf
       o: bind
   dbdata:
 
