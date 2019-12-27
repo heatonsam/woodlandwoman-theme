@@ -117,10 +117,17 @@ function woodlandwoman_widgets_init() {
 add_action( 'widgets_init', 'woodlandwoman_widgets_init' );
 
 /**
+ * Use the minified stylesheet.
+ */
+function get_stylesheet_minified_uri() {
+    return trailingslashit(get_template_directory_uri()) . 'style.min.css';
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function woodlandwoman_scripts() {
-	wp_enqueue_style( 'woodlandwoman-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'woodlandwoman-style', get_stylesheet_minified_uri() );
 
 	wp_enqueue_script( 'woodlandwoman-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -158,4 +165,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

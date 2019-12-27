@@ -11,49 +11,30 @@
  *
  * @package Woodland_Woman
  */
-
 get_header();
 ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<body <?php body_class(); ?>>
+    <div id="page" class="site">
+        <div id="content" class="site-content">
+            <div class="grid-wrapper">
+	              <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'woodlandwoman' ); ?></a>
+                <?php include('header-visible.php'); ?>
+                <div id="content" class="site-content">
+                    <div id="primary" class="content-area grid-main">
+		                    <main id="main" class="site-main">
+                            <?php include('featured-posts.php'); ?>
+		                    </main><!-- #main -->
+                    </div><!-- #primary, grid-main -->
+                </div><!-- #content -->
+                <?php
+                get_sidebar();
+                ?>
+                <?php include('post-grid.php'); ?>
+                <?php include('insta-grid.php'); ?>
+            </div>
+            <?php
+            get_footer();
+            ?>
+        </div>
+    </div>
+</body>
