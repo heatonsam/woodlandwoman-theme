@@ -13,28 +13,14 @@
  */
 get_header();
 ?>
-<body <?php body_class(); ?>>
-    <div id="page" class="site">
-        <div id="content" class="site-content">
-            <div class="grid-wrapper">
-	              <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'woodlandwoman' ); ?></a>
-                <?php include('header-visible.php'); ?>
-                <div id="content" class="site-content">
-                    <div id="primary" class="content-area grid-main">
-		                    <main id="main" class="site-main">
-                            <?php include('featured-posts.php'); ?>
-		                    </main><!-- #main -->
-                    </div><!-- #primary, grid-main -->
-                </div><!-- #content -->
-                <?php
-                get_sidebar();
-                ?>
-                <?php include('post-grid.php'); ?>
-                <?php include('insta-grid.php'); ?>
-            </div>
-            <?php
-            get_footer();
-            ?>
-        </div>
+<body <?php body_class('site-container'); ?>>
+    <div class="grid-wrapper">
+        <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'woodlandwoman' ); ?></a>
+        <?php include('header-visible.php'); ?>
+        <?php include('featured-posts.php'); ?>
+        <?php get_sidebar(); ?>
+        <?php include('post-grid.php'); ?>
+        <?php include('insta-grid.php'); ?>
+        <?php get_footer(); ?>
     </div>
 </body>
