@@ -1,7 +1,6 @@
 <header id="masthead" class="site-header grid-header">
 		<div class="site-branding">
 			  <?php
-			  the_custom_logo();
 			  if ( is_front_page() && is_home() ) :
 				?>
 				    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -14,47 +13,22 @@
 			  $woodlandwoman_description = get_bloginfo( 'description', 'display' );
 			  if ( $woodlandwoman_description || is_customize_preview() ) :
 				?>
-				    <p class="site-description"><?php echo $woodlandwoman_description; /* WPCS: xss ok. */ ?></p>
+				    <p class="site-description">
+                <?php echo $woodlandwoman_description; /* WPCS: xss ok. */ ?>
+            </p>
 			  <?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'woodlandwoman' ); ?></button>
-			  <?php
-			  wp_nav_menu( array(
-				    'theme_location' => 'menu-1',
-				    'menu_id'        => 'primary-menu',
-			  ) );
-			  ?>
-		</nav><!-- #site-navigation -->
-</header><!-- #masthead -->
-<header id="masthead" class="site-header grid-header">
-		<div class="site-branding">
-			  <?php
-			  the_custom_logo();
-			  if ( is_front_page() && is_home() ) :
-				?>
-				    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			  else :
-				?>
-				    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			  endif;
-			  $woodlandwoman_description = get_bloginfo( 'description', 'display' );
-			  if ( $woodlandwoman_description || is_customize_preview() ) :
-				?>
-				    <p class="site-description"><?php echo $woodlandwoman_description; /* WPCS: xss ok. */ ?></p>
-			  <?php endif; ?>
-		</div><!-- .site-branding -->
+		<nav id="site-navigation" class="flex-container main-navigation">
 
-		<nav id="site-navigation" class="main-navigation">
-			  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'woodlandwoman' ); ?></button>
-			  <?php
-			  wp_nav_menu( array(
-				    'theme_location' => 'menu-1',
-				    'menu_id'        => 'primary-menu',
-			  ) );
-			  ?>
 		</nav><!-- #site-navigation -->
+    <?php
+		if ( is_front_page() && is_home() ) :
+		?>
+        <div id="frontpage-banner">
+            <img src='http://localhost/wp-content/uploads/2019/12/banner-scaled.jpg'>
+        </div>
+    <?php
+    endif;
+    ?>
 </header><!-- #masthead -->

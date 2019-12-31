@@ -10,27 +10,12 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer grid-footer">
+<footer id="footer" class="site-footer grid-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'woodlandwoman' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'woodlandwoman' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'woodlandwoman' ), 'woodlandwoman', '<a href="http://samheaton.ca">Sam Heaton</a>' );
-				?>
+        <h4>Website Terms</h4>
+        <h4>Privacy</h4>
+        <h4>Contact Me</h4>
+        <h5>© Jenna Amirault</h5>
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
-</html>
+    <?php wp_footer(); ?>
+</footer><!-- #colophon -->

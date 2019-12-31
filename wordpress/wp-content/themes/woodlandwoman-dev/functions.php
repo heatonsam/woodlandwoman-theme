@@ -166,22 +166,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/**
- * Automatically assign featured image.
- */
-function auto_featured_image() {
-    global $post;
-
-    if (!has_post_thumbnail($post->ID)) {
-        $attached_image = get_children( "post_parent=$post->ID&amp;post_type=attachment&amp;post_mime_type=image&amp;numberposts=1" );
-
-      if ($attached_image) {
-              foreach ($attached_image as $attachment_id => $attachment) {
-                   set_post_thumbnail($post->ID, $attachment_id);
-              }
-         }
-    }
-}
 // Use it temporary to generate all featured images
 add_action('the_post', 'auto_featured_image');
 // Used for new posts
@@ -190,3 +174,63 @@ add_action('draft_to_publish', 'auto_featured_image');
 add_action('new_to_publish', 'auto_featured_image');
 add_action('pending_to_publish', 'auto_featured_image');
 add_action('future_to_publish', 'auto_featured_image');
+
+/* Custom Functions */
+
+/**
+ * Generate excerpt based on content.
+ */
+function grid_excerpt_length( $content ) {
+    $needles = array(".", "!",);
+
+    for ($i = 0; $i < strlen($content); $i++) {
+        for ($j = 0; $j < sizeof($needles); $j++) {
+            if ($content{$i} == $needles[$j]) {
+                return $i + 1;
+            }
+        }
+    }
+    return 300;
+}
+
+/**
+ * Generate excerpt based on content.
+ */
+function featured_excerpt_length( $content ) {
+    $needles = array(".", "!",);
+
+    for ($i = 200; $i < strlen($content); $i++) {
+        for ($j = 0; $j < sizeof($needles); $j++) {
+            if ($content{$i} == $needles[$j]) {
+                return $i + 1;
+            }
+        }
+    }
+    return 300;
+}
+
+/**
+ * Automatically assign featured image.
+ */
+function auto_featured_image() {
+    global $post;
+
+    if (!has_post_thumbnail($post->ID)) {
+        $attached_image = get_children( "post_parent=$post->ID&amp;post_type=attachment&amp;post_mime_type=image&amp;numberposts=1" );
+      if ($attached_image) {
+              foreach ($attached_image as $attachment_id => $attachment) {
+                   set_post_thumbnail($post->ID, $attachment_id);
+              }
+         }
+    }
+}
+
+/**
+ * Remove <p> tags from around images.
+ */
+function filter_ptags_on_images($content) {
+    $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+    return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+}
+add_filter('acf_the_content', 'filter_ptags_on_images');
+add_filter('the_content', 'filter_ptags_on_images');

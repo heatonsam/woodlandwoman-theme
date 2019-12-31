@@ -11,16 +11,19 @@
  *
  * @package Woodland_Woman
  */
-get_header();
 ?>
-<body <?php body_class('site-container'); ?>>
-    <div class="grid-wrapper">
-        <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'woodlandwoman' ); ?></a>
-        <?php include('header-visible.php'); ?>
-        <?php include('featured-posts.php'); ?>
-        <?php get_sidebar(); ?>
-        <?php include('post-grid.php'); ?>
-        <?php include('insta-grid.php'); ?>
-        <?php get_footer(); ?>
-    </div>
-</body>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+    <?php get_header(); ?>
+    <body <?php body_class('site-container'); ?>>
+        <div class="grid-wrapper">
+            <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'woodlandwoman' ); ?></a>
+            <?php include('header-visible.php'); ?>
+            <a id="#content"></a><?php include('featured-posts.php'); ?>
+            <?php get_sidebar(); ?>
+            <?php include('post-grid.php'); ?>
+            <?php include('insta-grid.php'); ?>
+            <?php get_footer(); ?>
+        </div>
+    </body>
+</html>
