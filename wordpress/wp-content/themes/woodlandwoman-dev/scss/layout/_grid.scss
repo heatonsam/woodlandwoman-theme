@@ -1,0 +1,155 @@
+.site-container {
+    max-width: $size__max-site-container;
+    margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#grid-featured-post-area {
+    margin-left: -13px;
+    margin-right: -25px;
+}
+
+.flex-container.grid-posts {
+    background-color: #f6f6f6;
+    margin: -25px;
+    justify-content: space-evenly;
+    padding-top: 15px;
+    pading-bottom: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: -25px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.flex-container.main-navigation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-navigation li {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 0px;
+    padding-bottom: 40px;
+}
+
+.main-navigation a {
+    border-bottom: 3px solid transparent;
+}
+
+.grid-post {
+    max-width: 260px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    /* box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1 ); */
+    border-radius: 1px;
+}
+
+.grid-single {
+    p, h1, h2, h3, h4, h5, h6, ul, ol {
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.entry-meta {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry-footer {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-photo {
+    width: 260px;
+    margin-left: -15px;
+}
+
+.grid-read-more {
+    margin-top: auto;
+    margin-bottom: -20px;
+}
+
+.grid-sidebar-content#search-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-sidebar-content {
+    margin-right: -130px;
+    margin-left: 60px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    max-width: 350px;
+}
+
+.grid-sidebar-box {
+    margin-top: 55px;
+    background-color: #f6f6f6;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#newsletter {
+    h4 {
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+#newsletter-input {
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.grid-wrapper {
+    @include grid-wrapper;
+}
+.grid-header {
+    @include grid-header;
+}
+.grid-main {
+    @include grid-main;
+}
+.grid-sidebar {
+    @include grid-sidebar;
+}
+
+.grid-single {
+    @include grid-single;
+}
+
+.grid-archive {
+    @include grid-archive;
+}
+
+.grid-posts {
+    @include grid-posts;
+}
+.grid-insta {
+    @include grid-insta;
+}
+.grid-footer {
+    @include grid-footer;
+}

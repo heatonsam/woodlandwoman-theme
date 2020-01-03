@@ -7,6 +7,7 @@
  * @package Woodland_Woman
  */
 ?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
     <?php get_header(); ?>
     <body <?php body_class('site-container'); ?>>

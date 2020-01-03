@@ -1,0 +1,77 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Grid wrapper
+@mixin grid-wrapper() {
+    padding: 25px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-areas:
+        'header header header header header header header header header header header header header header header header'
+        'main main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar'
+        'main main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar'
+        'article article article article article article article article article article article article article article article article'
+        'posts posts posts posts posts posts posts posts posts posts posts posts posts posts posts posts'
+        'posts posts posts posts posts posts posts posts posts posts posts posts posts posts posts posts'
+        'insta insta insta insta insta insta insta insta insta insta insta insta insta insta insta insta'
+        'footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer';
+}
+
+@mixin grid-header() {
+    grid-area: header;
+}
+
+@mixin grid-main() {
+    grid-area: main;
+}
+
+@mixin grid-sidebar() {
+    grid-area: sidebar;
+}
+
+@mixin grid-single() {
+    grid-area: article;
+}
+
+@mixin grid-archive() {
+    grid-area: archive;
+}
+
+@mixin grid-posts() {
+    grid-area: posts;
+}
+
+@mixin grid-insta() {
+    grid-area: insta;
+}
+
+@mixin grid-footer() {
+    grid-area: footer;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}

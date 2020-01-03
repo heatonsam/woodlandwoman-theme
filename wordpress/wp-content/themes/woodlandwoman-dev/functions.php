@@ -8,14 +8,14 @@
  */
 
 if ( ! function_exists( 'woodlandwoman_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
-	function woodlandwoman_setup() {
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
+function woodlandwoman_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -44,7 +44,7 @@ if ( ! function_exists( 'woodlandwoman_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'woodlandwoman' ),
+			  'menu-1' => esc_html__( 'Primary', 'woodlandwoman' ),
 		) );
 
 		/*
@@ -52,17 +52,17 @@ if ( ! function_exists( 'woodlandwoman_setup' ) ) :
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
+			  'search-form',
+			  'comment-form',
+			  'comment-list',
+			  'gallery',
+			  'caption',
 		) );
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'woodlandwoman_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
+			  'default-color' => 'ffffff',
+			  'default-image' => '',
 		) ) );
 
 		// Add theme support for selective refresh for widgets.
@@ -74,12 +74,12 @@ if ( ! function_exists( 'woodlandwoman_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
+			  'height'      => 250,
+			  'width'       => 250,
+			  'flex-width'  => true,
+			  'flex-height' => true,
 		) );
-	}
+}
 endif;
 add_action( 'after_setup_theme', 'woodlandwoman_setup' );
 
@@ -91,10 +91,10 @@ add_action( 'after_setup_theme', 'woodlandwoman_setup' );
  * @global int $content_width
  */
 function woodlandwoman_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'woodlandwoman_content_width', 640 );
+	  // This variable is intended to be overruled from themes.
+	  // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+	  // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+	  $GLOBALS['content_width'] = apply_filters( 'woodlandwoman_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'woodlandwoman_content_width', 0 );
 
@@ -104,15 +104,15 @@ add_action( 'after_setup_theme', 'woodlandwoman_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function woodlandwoman_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'woodlandwoman' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'woodlandwoman' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	  register_sidebar( array(
+		    'name'          => esc_html__( 'Sidebar', 'woodlandwoman' ),
+		    'id'            => 'sidebar-1',
+		    'description'   => esc_html__( 'Add widgets here.', 'woodlandwoman' ),
+		    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		    'after_widget'  => '</section>',
+		    'before_title'  => '<h2 class="widget-title">',
+		    'after_title'   => '</h2>',
+	  ) );
 }
 add_action( 'widgets_init', 'woodlandwoman_widgets_init' );
 
@@ -127,15 +127,15 @@ function get_stylesheet_minified_uri() {
  * Enqueue scripts and styles.
  */
 function woodlandwoman_scripts() {
-	wp_enqueue_style( 'woodlandwoman-style', get_stylesheet_minified_uri() );
+	  wp_enqueue_style( 'woodlandwoman-style', get_stylesheet_minified_uri() );
 
-	wp_enqueue_script( 'woodlandwoman-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	  wp_enqueue_script( 'woodlandwoman-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'woodlandwoman-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	  wp_enqueue_script( 'woodlandwoman-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	  if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		    wp_enqueue_script( 'comment-reply' );
+	  }
 }
 add_action( 'wp_enqueue_scripts', 'woodlandwoman_scripts' );
 
@@ -163,7 +163,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+	  require get_template_directory() . '/inc/jetpack.php';
 }
 
 // Use it temporary to generate all featured images
@@ -214,14 +214,15 @@ function featured_excerpt_length( $content ) {
  */
 function auto_featured_image() {
     global $post;
-
-    if (!has_post_thumbnail($post->ID)) {
-        $attached_image = get_children( "post_parent=$post->ID&amp;post_type=attachment&amp;post_mime_type=image&amp;numberposts=1" );
-      if ($attached_image) {
-              foreach ($attached_image as $attachment_id => $attachment) {
-                   set_post_thumbnail($post->ID, $attachment_id);
-              }
-         }
+    if (is_object($post)) {
+        if (!has_post_thumbnail($post->ID)) {
+            $attached_image = get_children( "post_parent=$post->ID&amp;post_type=attachment&amp;post_mime_type=image&amp;numberposts=1" );
+            if ($attached_image) {
+                foreach ($attached_image as $attachment_id => $attachment) {
+                    set_post_thumbnail($post->ID, $attachment_id);
+                }
+            }
+        }
     }
 }
 

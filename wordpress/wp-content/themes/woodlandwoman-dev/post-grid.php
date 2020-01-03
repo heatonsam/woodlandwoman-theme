@@ -17,9 +17,10 @@
             </div>
             <div class="grid-preview">
                 <p class="grid-post-date"><?php the_date(); ?></p>
-                <a href='<?php echo the_permalink(); ?>'>
-	                  <h4><?php the_title(); ?></h4>
+                <h4><a href='<?php echo the_permalink(); ?>'>
+	                  <?php the_title(); ?>
                 </a>
+                      </h4>
                 <div class="grid-excerpt">
                     <?php $excerpt = get_the_excerpt(); ?>
                     <?php $excerpt = substr($excerpt, 0, grid_excerpt_length($excerpt)); ?>

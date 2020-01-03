@@ -1,0 +1,112 @@
+* Jen's Blog Refresh To-do
+** Sections
+*** Site Structure
+**** DONE Development environment
+***** Emacs
+      - All text editing: PHP, JavaScript, HTML, CSS, SCSS. Using intelephense as a PHP LSP.
+***** Docker and docker-compose
+      - Running containers for MySQL database, Nginx server, and WordPress installation.
+***** WPGulp
+      - Auto-reloading, css and js compilation and minification.
+**** DONE Project structure
+     - Based on underscore https://underscores.me
+     #+BEGIN_EXAMPLE
+     ./
+     ├── 404.php
+     ├── archive.php
+     ├── comments.php
+     ├── footer.php
+     ├── functions.php
+     ├── gulpfile.babel.js
+     ├── header.php
+     ├── img
+     ├── inc
+     │   ├── custom-header.php
+     │   ├── customizer.php
+     │   ├── jetpack.php
+     │   ├── template-functions.php
+     │   └── template-tags.php
+     ├── index.php
+     ├── js
+     │   ├── customizer.js
+     │   ├── navigation.js
+     │   └── skip-link-focus-fix.js
+     ├── LICENSE
+     ├── package.json
+     ├── package-lock.json
+     ├── page.php
+     ├── phpcs.xml.dist
+     ├── README.md
+     ├── readme.txt
+     ├── screenshot.png
+     ├── scss
+     │   ├── elements
+     │   ├── forms
+     │   ├── layout
+     │   ├── media
+     │   ├── mixins
+     │   ├── modules
+     │   ├── navigation
+     │   ├── _normalize.scss
+     │   ├── site
+     │   ├── style.scss
+     │   ├── typography
+     │   └── variables-site
+     ├── search.php
+     ├── sidebar.php
+     ├── single.php
+     ├── style.css
+     ├── style.css.map
+     ├── style.min.css
+     ├── template-parts
+     │   ├── content-none.php
+     │   ├── content-page.php
+     │   ├── content.php
+     │   └── content-search.php
+     └── wpgulp.config.js
+     #+END_EXAMPLE
+**** DONE Normalization
+     - Used normalize scss package to standardize certain font and other css settings according to modern standards.
+**** DONE Database migration
+**** TODO Sidebar and basic frame
+***** TODO Blogroll
+      - Two large posts (featured or latest)
+      - Grid of 4x2 older posts with thumbnail, date, title, excerpt, READ MORE.
+***** TODO Horizontal Instagram feed across whole page.
+***** TODO Sidebar
+       - WRITER & RESEARCHER
+       - Hello and welcome section.
+       - Sign up for my newsletter
+**** TODO Archive view
+     - By category and date, then within.
+**** TODO Single post view
+     - Wider photos
+     - Larger font
+     - No sidebar visible
+**** TODO Menu
+     - Home, Activities, Environment, How To, Reviews, About
+**** TODO Footer
+     - Left-aligned: WEBSITE TERMS, PRIVACY, CONTACT ME, (C)Jenna Amirault
+*** Style
+**** TODO Fonts
+**** TODO Header
+**** TODO Widths
+**** TODO Grid using CSS grid for different sections of pages
+*** Functions
+**** JavaScript
+***** TODO Social media share clickable menu
+      - make it smaller and nicer and from scratch
+**** PHP
+***** TODO Return full size post preview
+      - Front page-based
+      - Category-based
+***** TODO Return grid size post preview
+***** TODO Return full post
+***** TODO Return full page
+***** TODO Return sidebar contents
+***** TODO Return footer contents
+***** TODO Return comment contents
+***** TODO Return comment enter window
+***** TODO Pagination
+** Misc
+*** TODO Mail integration

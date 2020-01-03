@@ -1,15 +1,7 @@
 <header id="masthead" class="site-header grid-header">
 		<div class="site-branding">
-			  <?php
-			  if ( is_front_page() && is_home() ) :
-				?>
-				    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                  <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
-			  else :
-				?>
-				    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			  endif;
 			  $woodlandwoman_description = get_bloginfo( 'description', 'display' );
 			  if ( $woodlandwoman_description || is_customize_preview() ) :
 				?>
@@ -20,7 +12,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="flex-container main-navigation">
-
+        <?php wp_nav_menu(); ?>
 		</nav><!-- #site-navigation -->
     <?php
 		if ( is_front_page() && is_home() ) :
