@@ -69,41 +69,38 @@
      - Used normalize scss package to standardize certain font and other css settings according to modern standards.
 **** DONE Database migration
 **** TODO Sidebar and basic frame
-***** TODO Blogroll
+***** DONE Blogroll
       - Two large posts (featured or latest)
       - Grid of 4x2 older posts with thumbnail, date, title, excerpt, READ MORE.
 ***** TODO Horizontal Instagram feed across whole page.
 ***** TODO Sidebar
-       - WRITER & RESEARCHER
-       - Hello and welcome section.
        - Sign up for my newsletter
-**** TODO Archive view
-     - By category and date, then within.
+**** TODO Category View.
 **** TODO Single post view
-     - Wider photos
-     - Larger font
-     - No sidebar visible
-**** TODO Menu
+     - Photos side by side
+     - Entry footer
+     - Comments section
+**** DONE Menu
      - Home, Activities, Environment, How To, Reviews, About
 **** TODO Footer
      - Left-aligned: WEBSITE TERMS, PRIVACY, CONTACT ME, (C)Jenna Amirault
 *** Style
-**** TODO Fonts
-**** TODO Header
-**** TODO Widths
-**** TODO Grid using CSS grid for different sections of pages
+**** DONE Fonts
+**** DONE Header
+**** DONE Widths
+**** DONE Grid using CSS grid for different sections of pages
 *** Functions
 **** JavaScript
 ***** TODO Social media share clickable menu
       - make it smaller and nicer and from scratch
 **** PHP
-***** TODO Return full size post preview
+***** DONE Return full size post preview
       - Front page-based
       - Category-based
-***** TODO Return grid size post preview
-***** TODO Return full post
+***** DONE Return grid size post preview
+***** DONE Return full post
 ***** TODO Return full page
-***** TODO Return sidebar contents
+***** DONE Return sidebar contents
 ***** TODO Return footer contents
 ***** TODO Return comment contents
 ***** TODO Return comment enter window

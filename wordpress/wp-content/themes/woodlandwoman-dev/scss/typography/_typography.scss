@@ -9,10 +9,10 @@ input,
 select,
 optgroup,
 textarea {
-	color: $color__text-main;
-	font-family: $font__main;
-	@include font-size(1);
-	line-height: $font__line-height-body;
+	  color: $color__text-main;
+	  font-family: $font__main;
+	  @include font-size(1);
+	  line-height: $font__line-height-body;
 }
 
 p a:link {
@@ -61,7 +61,6 @@ a {
     p, li {
         font-size: $font__entry-content-size;
         font-weight: 350;
-        padding-left: 15px;
         letter-spacing: .05rem;
     }
 
@@ -69,15 +68,144 @@ a {
         font-weight: 400;
     }
     a:hover {
-        border-bottom: 2px solid rgba(33, 117, 155, 0.5);
+        border-bottom: 2px solid $color__blue-lighter;
     }
 }
 
+.entry-footer-categories {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        margin-bottom: 25px;
+        margin-top: 15px;
+    }
 
+    a {
+        color: #fff;
+        font-weight: 500;
+        background-color: $color__blue-light;
+        display: inline;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 50px;
+        margin: 10px;
+    }
+    a:hover {
+        color: #fff;
+        background-color: $color__blue;
+    }
 
-#footer p {
+    a:visited {
+        color: #fff;
+        background-color: $color__blue;
+    }
 
+    a:active {
+        color: #fff;
+        background-color: $color__blue;
+    }
 }
+
+.entry-footer-tags {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 10px;
+    }
+
+    li {
+        display: inline;
+        margin-right: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    a {
+        padding: 10px;
+        background-color: $color__orange;
+        color: #fff;
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+    a:hover {
+        background-color: $color__orange-dark;
+        color: #fff;
+    }
+    a:active {
+        color: #fff;
+    }
+    a:visited {
+        color: #fff;
+    }
+    a:link {
+        color: #fff;
+    }
+}
+
+figcaption {
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+#commentform input {
+    padding: 10px;
+}
+
+.comment-form-author {
+    font-weight: 500;
+    input {
+        margin-left: 15px;
+
+    }
+}
+
+#comment {
+    height: 150px;
+    padding: 15px;
+}
+
+.comment-form-email {
+    font-weight: 500;
+    input {
+        margin-left: 15px;
+
+    }
+}
+
+#submit {
+    padding: 15px;
+    border-radius: 1px;
+    background-color: $color__text-screen;
+    color: #fff;
+    font-weight: 500;
+	  font-family: $font__header;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+
+.comment-form-url {
+    font-weight: 500;
+    input {
+        margin-left: 37px;
+
+   }
+}
+
+.required {
+    color: red;
+    margin-left: 3px;
+}
+
 
 @import "headings";
 

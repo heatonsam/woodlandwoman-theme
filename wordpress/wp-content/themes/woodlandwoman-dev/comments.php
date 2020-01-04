@@ -32,13 +32,13 @@ if ( post_password_required() ) {
 			if ( '1' === $woodlandwoman_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'woodlandwoman' ),
+					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'woodlandwoman' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $woodlandwoman_comment_count, 'comments title', 'woodlandwoman' ) ),
+					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $woodlandwoman_comment_count, 'comments title', 'woodlandwoman' ) ),
 					number_format_i18n( $woodlandwoman_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -69,7 +69,40 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
-	?>
+$fields =  array(
+
+  'author' =>
+    '<p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) .
+    ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
+    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+    '" size="30"' . 'required /></p>',
+
+  'email' =>
+    '<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) .
+    ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
+    '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+    '" size="30"' . ' required /></p>',
+
+  'url' =>
+    '<p class="comment-form-url"><label for="url">' . __( 'URL', 'domainreference' ) . '</label>' .
+    '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+    '" size="30" /></p>',
+);
+
+$comments_args = array(
+        // change the title of send button
+        'label_submit'=>'Submit',
+        // change the title of the reply section
+        'title_reply'=>'Comment',
+        // remove "Text or HTML to be displayed after the set of comment fields"
+        'comment_notes_after' => '',
+        // redefine your own textarea (the comment body)
+        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true" required></textarea></p>',
+        'fields' => apply_filters( 'comment_form_default_fields', $fields ),
+);
+
+
+comment_form($comments_args);
+?>
 
 </div><!-- #comments -->

@@ -175,6 +175,18 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
     }
 }
 
+.post-navigation {
+    font-family: $font__header;
+    letter-spacing: .08rem;
+    font-size: 1.3rem;
+
+    a:hover {
+        color: #404040;
+        border-bottom: 2px solid #404040;
+    }
+}
+
+
 #footer {
     h1, h2, h3, h4, h5, h6 {
 

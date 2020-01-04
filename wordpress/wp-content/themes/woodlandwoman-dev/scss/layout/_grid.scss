@@ -123,6 +123,10 @@
     display: block;
 }
 
+.post-navigation {
+    padding-bottom: 35px;
+}
+
 .grid-wrapper {
     @include grid-wrapper;
 }

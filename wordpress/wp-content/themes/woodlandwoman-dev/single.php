@@ -15,6 +15,7 @@
             <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'woodlandwoman' ); ?></a>
             <?php include('header-visible.php'); ?>
             <?php include('single-content.php'); ?>
+            <?php include('insta-grid.php'); ?>
             <?php get_footer(); ?>
         </div>
     </body>

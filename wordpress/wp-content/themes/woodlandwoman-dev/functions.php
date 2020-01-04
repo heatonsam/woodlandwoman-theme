@@ -235,3 +235,13 @@ function filter_ptags_on_images($content) {
 }
 add_filter('acf_the_content', 'filter_ptags_on_images');
 add_filter('the_content', 'filter_ptags_on_images');
+
+/**
+ * Remove <p> tags from around images.
+ */
+function filter_h4_on_images($content) {
+    $content = preg_replace('/<h4>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/h4>/iU', '\1\2\3', $content);
+    return preg_replace('/<h4>\s*(<iframe .*>*.<\/iframe>)\s*<\/h4>/iU', '\1', $content);
+}
+add_filter('acf_the_content', 'filter_h4_on_images');
+add_filter('the_content', 'filter_h4_on_images');
