@@ -12,10 +12,8 @@
 ?>
 <footer id="footer" class="site-footer grid-footer">
 		<div class="site-info">
-        <h4>Website Terms</h4>
-        <h4>Privacy</h4>
-        <h4>Contact Me</h4>
-        <h5>© Jenna Amirault</h5>
+        <h4><a href="/website-terms">Website Terms / Privacy</a></h4>
+        <h5>© 2019 Jenna Amirault</h5>
 		</div><!-- .site-info -->
     <?php wp_footer(); ?>
 </footer><!-- #colophon -->

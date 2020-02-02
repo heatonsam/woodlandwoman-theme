@@ -1,3 +1,4 @@
+#+TITLE: Jen's Blog Refresh To-do
 * Jen's Blog Refresh To-do
 ** Sections
 *** Site Structure
@@ -68,30 +69,35 @@
 **** DONE Normalization
      - Used normalize scss package to standardize certain font and other css settings according to modern standards.
 **** DONE Database migration
-**** TODO Sidebar and basic frame
+**** DONE Sidebar and basic frame
 ***** DONE Blogroll
       - Two large posts (featured or latest)
       - Grid of 4x2 older posts with thumbnail, date, title, excerpt, READ MORE.
-***** TODO Horizontal Instagram feed across whole page.
-***** TODO Sidebar
-       - Sign up for my newsletter
-**** TODO Category View.
-**** TODO Single post view
+***** DONE Horizontal Instagram feed across whole page.
+***** DONE Sidebar
+**** DONE Category View.
+**** DONE Single post view
      - Photos side by side
      - Entry footer
      - Comments section
 **** DONE Menu
      - Home, Activities, Environment, How To, Reviews, About
-**** TODO Footer
+**** DONE Footer
      - Left-aligned: WEBSITE TERMS, PRIVACY, CONTACT ME, (C)Jenna Amirault
+**** TODO Add categories/menu items to menu
+**** TODO Make grid posts clickable entire post
 *** Style
 **** DONE Fonts
 **** DONE Header
 **** DONE Widths
 **** DONE Grid using CSS grid for different sections of pages
+**** DONE Sort out H4/H5/H6 for blog post subheads
+**** TODO Layout for mobile/smaller views
+**** TODO Layout with full width header and footer
+**** DONE Make whole box of grid post clickable.
 *** Functions
 **** JavaScript
-***** TODO Social media share clickable menu
+***** Social media share clickable menu
       - make it smaller and nicer and from scratch
 **** PHP
 ***** DONE Return full size post preview
@@ -99,11 +105,12 @@
       - Category-based
 ***** DONE Return grid size post preview
 ***** DONE Return full post
-***** TODO Return full page
+***** DONE Return full page
 ***** DONE Return sidebar contents
-***** TODO Return footer contents
-***** TODO Return comment contents
-***** TODO Return comment enter window
-***** TODO Pagination
+***** DONE Return footer contents
+***** DONE Return comment contents
+***** DONE Return comment enter window
+***** Pagination
+      - Currently is just previous and next page. I think this is good enough.
 ** Misc
 *** TODO Mail integration

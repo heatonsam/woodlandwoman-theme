@@ -1,4 +1,4 @@
-<header id="masthead" class="site-header grid-header">
+<header id="masthead" class="site-header header">
 		<div class="site-branding">
                   <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php

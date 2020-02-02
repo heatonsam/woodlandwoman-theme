@@ -11,12 +11,13 @@
 <html <?php language_attributes(); ?>>
     <?php get_header(); ?>
     <body <?php body_class('site-container'); ?>>
-        <div class="grid-wrapper">
             <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'woodlandwoman' ); ?></a>
             <?php include('header-visible.php'); ?>
+        <div class="grid-wrapper">
             <a id="#content"></a><?php include('archive-content.php'); ?>
-            <?php get_sidebar(); ?>
-            <?php get_footer(); ?>
+<?php get_sidebar(); ?>
         </div>
+        <?php include('insta-grid.php'); ?>
+        <?php get_footer(); ?>
     </body>
 </html>

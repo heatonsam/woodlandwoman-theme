@@ -8,10 +8,10 @@
  */
 ?>
 
-<div id="sidebar" class="widget-area grid-sidebar">
-    <?php /*dynamic_sidebar( 'sidebar-1' );*/  ?>
+<div id="sidebar" class="widget-area grid-sidebar <?php echo (is_archive() ? 'archive-sidebar' : ""); ?>">
     <div class="grid-sidebar-content">
         <div id="search-box"><?php  get_search_form();  ?></div>
+
         <div class="grid-sidebar-box">
             <div id="about-me">
                 <h3>Writer & Researcher</h3>
@@ -25,7 +25,7 @@
             <div id="newsletter">
                 <h4>Sign Up For My Newsletter</h4>
                 <input id="newsletter-input" placeholder="email" type="text">
-                <p>Enter your email to subscribe to this blog. I'll email you about 1-2 a month to let you know about new posts and adventures!</p>
+                <p>Enter your email to subscribe to this blog. I'll email you about 1-2 times a month to let you know about new posts and adventures!</p>
             </div>
         </div>
     </div>

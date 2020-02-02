@@ -4,17 +4,19 @@
         <?php if ( have_posts() ) : ?>
 
 			      <header class="page-header">
-				        <?php
-				        the_archive_title( '<h1 class="page-title">', '</h1>' );
-				        the_archive_description( '<div class="archive-description">', '</div>' );
-				        ?>
+				        <h1 class="page-title">
+					          <?php
+					          /* translators: %s: search query. */
+					          printf( esc_html__( 'Search Results for: %s', 'woodlandwoman' ), '<span>' . get_search_query() . '</span>' );
+					          ?>
+				        </h1>
 			      </header><!-- .page-header -->
 
 			      <?php
 			      /* Start the Loop */
             the_posts_navigation( array(
-                'prev_text'                  => __( '<span class="nav-arrows">«</span> Older posts' ),
-                'next_text'                  => __( 'Newer posts <span class="nav-arrows">»</span>' ),
+                'prev_text'                  => __( '<span class="nav-arrows">«</span> Previous page' ),
+                'next_text'                  => __( 'Next page <span class="nav-arrows">»</span>' ),
                 'aria_label'                   => __( 'posts' ),
                 'screen_reader_text' => __( 'Continue Reading' ),
             ) );
@@ -26,8 +28,8 @@
 
 			      endwhile;
             the_posts_navigation( array(
-                'prev_text'                  => __( '<span class="nav-arrows">«</span> Older posts' ),
-                'next_text'                  => __( 'Newer posts <span class="nav-arrows">»</span>' ),
+                'prev_text'                  => __( '<span class="nav-arrows">«</span> Previous page' ),
+                'next_text'                  => __( 'Next page <span class="nav-arrows">»</span>' ),
                 'aria_label'                   => __( 'posts' ),
                 'screen_reader_text' => __( 'Continue Reading' ),
             ) );

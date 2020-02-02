@@ -25,15 +25,15 @@
 
 // Grid wrapper
 @mixin grid-wrapper() {
+    max-width: $size__max-site-container;
+    margin: auto;
     padding: 25px;
     display: grid;
     grid-gap: 25px;
     grid-template-areas:
         'header header header header header header header header header header header header header header header header'
         'main main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar'
-        'main main main main main main main main main main main sidebar sidebar sidebar sidebar sidebar'
         'article article article article article article article article article article article article article article article article'
-        'posts posts posts posts posts posts posts posts posts posts posts posts posts posts posts posts'
         'posts posts posts posts posts posts posts posts posts posts posts posts posts posts posts posts'
         'insta insta insta insta insta insta insta insta insta insta insta insta insta insta insta insta'
         'footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer';
@@ -45,6 +45,9 @@
 
 @mixin grid-main() {
     grid-area: main;
+    margin-left: -13px;
+    margin-right: -25px;
+    width: 690px;
 }
 
 @mixin grid-sidebar() {
@@ -63,8 +66,13 @@
     grid-area: posts;
 }
 
+@mixin grid-page() {
+    grid-area: article;
+}
+
 @mixin grid-insta() {
     grid-area: insta;
+    width: 100%;
 }
 
 @mixin grid-footer() {

@@ -1,3 +1,7 @@
+img {
+    max-width: 100%;
+}
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -23,28 +27,39 @@ object {
     object-fit: cover;
     object-position: 0 40%;
     max-height: 100px;
-    margin-top: -15px;
+    /*margin-top: -15px;*/
 }
 
 /* Images. */
 .featured-post-preview img {
     object-fit: cover;
     max-height: 350px;
+    width: 100%;
 }
 
 .grid-single img {
     width: 100%;
 }
 
+.grid-photo {
+    /*
+    width: 260px;
+    margin-left: -15px;
+   */
+}
+
 #frontpage-banner {
-    margin-right: -50px;
-    margin-left: -50px;
+
 }
 
 #frontpage-banner img {
     margin-right: auto;
     margin-left: auto;
     display: block;
+
+    object-fit: cover;
+    max-height: 400px;
+    width: 100%;
 }
 
 #jen-image {

@@ -1,4 +1,4 @@
-<article class="grid-single">
+<main class="grid-single">
 <?php while ( have_posts() ) : ?>
     <div class="single-content">
 			  <?php the_post(); ?>
@@ -19,4 +19,4 @@ the_post_navigation( array(
 
 		endwhile; // End of the loop.
 		?>
-</article>
+</main>
