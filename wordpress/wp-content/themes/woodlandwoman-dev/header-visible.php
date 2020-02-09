@@ -18,7 +18,7 @@
 		if ( is_front_page() && is_home() ) :
 		?>
         <div id="frontpage-banner">
-            <img src='http://localhost/wp-content/uploads/2019/12/banner-scaled.jpg'>
+            <img src='http://localhost/wp-content/uploads/2020/02/banner_new.jpg'>
         </div>
     <?php
     endif;

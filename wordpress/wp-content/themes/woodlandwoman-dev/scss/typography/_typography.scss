@@ -44,6 +44,11 @@ a {
     text-align: center;
     font-weight: 350;
     letter-spacing: 0.06rem;
+
+    a:hover {
+        border-bottom: solid 2px $color__blue-lighter;
+    }
+
 }
 
 .featured-post-preview p {
