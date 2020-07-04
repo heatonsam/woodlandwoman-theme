@@ -59,7 +59,6 @@ p a:active{color:#21759b}
 p{font-family:"Montserrat",sans-serif}
 a{text-decoration:none}
 #sidebar p{font-size:.95rem;text-align:center;font-weight:350;letter-spacing:.06rem}
-#sidebar p a:hover{border-bottom:solid 2px rgba(33,117,155,0.5)}
 .featured-post-preview p{font-size:1.1rem;font-weight:300}
 .grid-posts p{font-family:"Montserrat",sans-serif;font-size:.8rem;margin-bottom:0;margin-top:0}
 .entry-content p,.entry-content li{font-size:1.2rem;font-weight:350;letter-spacing:.05rem}
@@ -212,8 +211,8 @@ div.addtoany_content{max-width:768px;margin-left:auto;margin-right:auto;margin-b
 .grid-read-more{margin-top:auto;margin-bottom:-25px;padding:1rem;padding-top:0}
 .grid-sidebar-content#search-box{display:block;margin-left:auto;margin-right:auto}
 .grid-sidebar-content{margin-top:35px;margin-bottom:35px;width:100%}
-.grid-sidebar-box{max-width:350px;margin-top:55px;background-color:#f6f6f6;padding-left:35px;padding-right:35px;padding-top:10px;padding-bottom:10px;margin-bottom:-20px}
-#newsletter h4{margin-top:15px;font-size:1.3rem;font-weight:400;text-transform:uppercase}
+.grid-sidebar-box{max-width:350px;margin-top:55px;background-color:#f6f6f6;padding-left:35px;padding-right:35px;padding-top:5px;padding-bottom:5px;margin-bottom:-20px}
+#newsletter h4{font-size:1.3rem;font-weight:400;text-transform:uppercase}
 #mc-embedded-subscribe-form input{padding:10px;text-align:center;margin-left:auto;margin-right:auto;display:block}
 #mc-embedded-subscribe{margin-top:17px;font-family:"Barlow Condensed",sans-serif;font-size:1.2rem;background-color:#21759b;color:#f6f6f6;text-transform:uppercase;border:0 solid black;letter-spacing:.08rem}
 #mc-embedded-subscribe:hover{background-color:#1a6384;cursor:pointer}
@@ -273,7 +272,7 @@ embed,iframe,object{max-width:100%}
 .featured-post-preview img{-o-object-fit:cover;object-fit:cover;max-height:350px;width:100%}
 .grid-single img{width:100%}
 #frontpage-banner img{margin-right:auto;margin-left:auto;display:block;-o-object-fit:cover;object-fit:cover;max-height:400px;width:100%}
-#jen-image{display:block;margin-left:auto;margin-right:auto;width:80%;border-radius:50%;zoom:110%;margin-top:25px;margin-bottom:-15px}
+#jen-image{display:block;margin-left:auto;margin-right:auto;width:80%;border-radius:50%;zoom:110%}
 img.aligncenter{margin-top:25px;margin-bottom:50px}
 .entry-content iframe{margin:0 auto;display:block;width:100%;margin-top:50px;margin-bottom:50px}
 .wp-block-image{width:100%}

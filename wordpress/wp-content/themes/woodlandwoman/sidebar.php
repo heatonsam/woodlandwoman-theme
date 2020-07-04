@@ -11,7 +11,6 @@
 <div id="sidebar" class="widget-area grid-sidebar <?php echo (is_archive() ? 'archive-sidebar' : ""); ?>">
     <div class="grid-sidebar-content">
         <div id="search-box"><?php  get_search_form();  ?></div>
-
         <div class="grid-sidebar-box">
             <div id="about-me">
                 <h3>Writer & Researcher</h3>

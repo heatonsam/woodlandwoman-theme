@@ -215,7 +215,7 @@ function featured_excerpt_length( $content ) {
 function auto_featured_image() {
     global $post;
     if (is_object($post)) {
-        if (!has_post_thumbnail($post->ID)) {
+        if (!has_post_thumbnail($post)) {
             $attached_image = get_children( "post_parent=$post->ID&amp;post_type=attachment&amp;post_mime_type=image&amp;numberposts=1" );
             if ($attached_image) {
                 foreach ($attached_image as $attachment_id => $attachment) {
@@ -225,6 +225,15 @@ function auto_featured_image() {
         }
     }
 }
+
+// Remove pages from search results
+function exclude_pages_from_search($query) {
+    if ( $query->is_main_query() && is_search() ) {
+        $query->set( 'post_type', 'post' );
+    }
+    return $query;
+}
+add_filter( 'pre_get_posts','exclude_pages_from_search' );
 
 /**
  * Remove <p> tags from around images.

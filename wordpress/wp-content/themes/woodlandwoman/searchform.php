@@ -15,7 +15,7 @@
 
 </script>
 
-<div id="search-box"><form id="search-form" role="search" method="get" class="search-form" action="http://localhost/">
+<div id="search-box"><form id="search-form" role="search" method="get" class="search-form" action="https://woodlandwoman.ca/">
 				<label>
 					<span class="screen-reader-text">Search for:</span>
                                                                   <span id="search-button" class="fa fa-search"></span>
