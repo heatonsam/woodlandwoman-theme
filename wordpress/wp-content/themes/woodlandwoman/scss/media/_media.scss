@@ -83,10 +83,30 @@ img.aligncenter {
         margin-top: 50px;
         margin-bottom: 50px;
     }
+
+    img {
+        width: 100%;
+
+    }
 }
 
-.wp-block-image img {
-    width: 100%;
+.wp-block-image {
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        text-align: center;
+        padding-bottom: 5px;
+    }
+}
+
+.wp-block-gallery {
+    figcaption {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /*--------------------------------------------------------------
